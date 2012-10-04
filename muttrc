@@ -1,0 +1,89 @@
+# s0805753 .muttrc 
+
+# IMAP server &  folders
+set spoolfile=imaps://s0805753@imap.sms.ed.ac.uk:993/INBOX
+set folder=imaps://s0805753@imap.sms.ed.ac.uk:993
+set record="=Sent Items"
+set postponed="=Drafts"
+
+# SMTP server
+set smtp_url=smtp://s0805753@smtp.sms.ed.ac.uk:587
+
+# Secure Sockets 
+set ssl_starttls=yes
+set ssl_force_tls=yes
+set imap_check_subscribed
+
+# Use work address
+set from = 's0805753@sms.ed.ac.uk'
+
+# GPG Encryption 
+set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0x781F9231 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0x781F9231 -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r" 
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r" 
+set pgp_autosign=yes
+set pgp_sign_as=0x781F9231
+set pgp_replyencrypt=yes
+set pgp_timeout=1000
+set pgp_good_sign="^gpg: Good signature from"
+
+# Cache
+set header_cache ="~/Mail/Inbox/headers"
+set message_cachedir ="~/Mail/Inbox/messages"
+
+# SMTP 
+set sendmail="/usr/bin/msmtp"
+
+# Set Vim as editor
+set editor=/usr/bin/vim
+
+# Enable threading
+set sort="threads"
+set strict_threads="yes"
+
+# Format mailbox folder display
+set folder_format="%2C %t %N %8s %d %f"
+
+# Don't collapse threads
+unset collapse_unread
+
+# Fix thread bindings
+bind index - collapse-thread
+bind index _ collapse-all
+
+# Split pager view
+set pager_index_lines=10
+
+# Spelling
+set ispell = 'aspell'
+
+# Key bindings
+bind pager <Up> previous-line
+bind pager <Down> next-line
+bind pager \Cd half-down
+bind pager \Cu half-up
+
+# Visual appearance
+#     feature    foreground      background
+color attachment green           black
+color error      red             black
+color hdrdefault red             default
+color indicator  brightwhite		default
+color markers    cyan            default
+color message    cyan            default
+color normal     default         default
+color quoted     blue            default
+color search     default         green
+color signature  red             default
+color status     green           default
+color tilde      magenta         default
+color tree       magenta         default

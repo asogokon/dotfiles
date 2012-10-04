@@ -1,0 +1,185 @@
+# Packages & namespaces
+snippet p "package"
+package
+endsnippet
+
+snippet ns "namespace"
+uk.ac.ed.inf
+endsnippet
+
+# Objects/Classes
+snippet cl "Class"
+Class ${1:className}(${2:arguments}) {
+   ${3:body}
+}
+endsnippet
+
+snippet ob "Object"
+object ${1:objectName} {
+   ${2}
+}
+endsnippet
+
+# Functions
+snippet def "function"
+def ${1:functionName}(${2:arguments}): ${3:returnType} = {
+   ${4:body}
+}
+endsnippet
+
+# One-liner
+snippet defl "one-line function"
+def ${1:functionName}(${2:arguments}): ${3:returnType} = 
+endsnippet
+
+# Main method
+snippet main "main method"
+def main(args: Array[String]) = {
+   $1
+}
+endsnippet
+
+# Types
+snippet I "Int"
+Int
+endsnippet
+
+snippet L "Long"
+Long
+endsnippet
+
+# Maths
+snippet Z "Integers"
+Long
+endsnippet
+
+snippet S "String"
+String
+endsnippet
+
+snippet D "Double"
+Double
+endsnippet
+
+# Maths
+snippet R "Reals"
+Double
+endsnippet
+
+snippet U "Unit"
+Unit
+endsnippet
+
+snippet B "Boolean"
+Boolean
+endsnippet
+
+snippet C "Char"
+Char
+endsnippet
+
+snippet F "Float"
+Float
+endsnippet
+
+# Maths
+snippet to "=>"
+=> 
+endsnippet
+
+snippet from "<-"
+<- 
+endsnippet
+
+# Collections Framework
+snippet A[ "Array"
+Array[${1:type}] ${2}
+endsnippet
+
+snippet L[ "List"
+List[${1:type}] ${2}
+endsnippet
+
+# Comments
+snippet com "Comment"
+/* ${1:comment} */
+${2}
+endsnippet
+
+snippet docl "Scaladoc 1-liner"
+/** ${1:documentation} */
+endsnippet
+
+snippet doc "Scaladoc"
+/** ${1:documentation}
+  * $2
+  */
+endsnippet
+
+snippet todo "To do"
+/* TODO: ${1:task} 
+ * Since `date +"%d/%m/%Y"` 
+ */
+endsnippet
+
+snippet fix "Fix me"
+/* FIXME: ${1:fix} 
+ * Since `date +"%d/%m/%Y"` 
+ */
+endsnippet
+
+# Printing and Logging
+snippet pr "println"
+println(${1})
+endsnippet
+
+# Loops
+snippet wh "while"
+while (${1:condition}) {
+   ${2}
+}
+endsnippet
+
+snippet for "for"
+for (${1:condition}) {
+   ${2}
+}
+endsnippet
+
+# Miscellaneous
+snippet over "override"
+override 
+endsnippet
+
+snippet range "range"
+List.range(${1})${2}
+endsnippet
+
+snippet ls "List of Strings"
+List[String]
+endsnippet
+
+snippet li "List of Integers"
+List[Int]
+endsnippet
+
+snippet ld "List of Doubles"
+List[Double]
+endsnippet
+
+snippet { "open & close brace"
+{ $1 }
+endsnippet
+
+# Logging - Apache log4j
+snippet logger "logger"
+Logger logger = Logger.getLogger("${1:loggerName}")
+endsnippet
+
+snippet info "info"
+logger.info(${1})
+endsnippet
+
+snippet error "error"
+logger.error(${1})
+endsnippet
