@@ -1,0 +1,46 @@
+# Conky panel config - s0805753 20/06/2012
+
+# Set panel windown properties
+own_window yes
+own_window_type override
+own_window_transparent no
+own_window_hints undecorated, sticky,skip_taskbar,skip_pager
+background yes
+
+double_buffer yes
+
+use_spacer right
+use_xft yes
+
+update_interval 3.0
+
+# Dimensions
+minimum_size 1024 8
+
+draw_borders no
+
+uppercase yes
+
+stippled_borders 10
+
+border_width 1
+
+default_color cccccc
+default_shade_color 101010
+default_outline_color 555555
+
+own_window_colour 222222
+own_window_transparent no
+
+alignment top_left
+
+gap_x 2
+gap_y 1
+
+override_utf8_locale no
+xftfont anorexia:size=8
+xftalpha 0.4
+
+
+TEXT
+${color #008c8c}CPU  1: ${color }${cpu cpu1}%${goto 80}${color #3c3c3c}${cpubar cpu1 6,60} ${color #666666}| ${color #008c8c} 2: ${color }${cpu cpu2}% ${goto 195}${color #3c3c3c}${cpubar cpu2 6,60} ${color #666666}| ${color #008c8c}RAM: ${color }$mem/$memmax ${color #3c3c3c}${membar 6,60} ${color #666666}| ${color #008c8c}Disk: ${color }${fs_used /}/${fs_size /} ${color #3c3c3c}${fs_bar 6,60 /} ${color #666666}| ${color #008c8c}Processes: ${color }$running_processes/$processes ${goto 750} ${color #666666}| ${color #008c8c}Network: Up: ${color }${upspeed eth0} ${goto 900}${color #008c8c}Down: ${color } ${downspeed eth0}
