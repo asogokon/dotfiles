@@ -1,0 +1,46 @@
+# Conky panel config - s0805753 20/06/2012
+
+# Set panel windown properties
+own_window yes
+own_window_type override
+own_window_transparent no
+own_window_hints undecorated, sticky,skip_taskbar,skip_pager
+background yes
+
+double_buffer yes
+
+use_spacer right
+use_xft yes
+
+update_interval 1.0
+
+# Dimensions
+minimum_size 2000 14
+
+draw_borders no
+
+uppercase yes
+
+stippled_borders 0
+
+border_width 1
+
+default_color 666666
+default_shade_color 101010
+default_outline_color 666666
+
+own_window_colour 000000
+own_window_transparent no
+
+alignment top_left
+
+gap_x 2
+gap_y 6
+
+override_utf8_locale no
+xftfont Terminus:style=Bold:size=10
+xftalpha 0.6
+
+
+TEXT
+${color #00B80B}  CPU ${color #3c3c3c}${cpubar cpu1 12,200} ${cpubar cpu2 12,200} ${cpubar cpu3 12,200} ${cpubar cpu4 12,200} ${color #00B80B}    |     RAM ${color }$mem/$memmax ${color #3c3c3c}${membar 12,400}${color #00B80B}   |   Network Up ${color }${upspeed eth0} ${color #00B80B}Down ${color } ${downspeed eth0} ${color } 

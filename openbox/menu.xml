@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="apps-algebra-menu" label="Algebra">
+		<item label="wxMaxima">
+			<action name="Execute">
+				<command>
+					wxmaxima
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Mathematica">
+			<action name="Execute">
+				<command>
+					Mathematica
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-editors-menu" label="Editors">
+		<item label="Vim">
+			<action name="Execute">
+				<command>
+					urxvt -e "vim"
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+					<wmclass>
+						Vim
+					</wmclass>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="TeXmaker">
+			<action name="Execute">
+				<command>
+					texmaker
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+					<wmclass>
+						Texmaker
+					</wmclass>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-term-menu" label="Terminals">
+		<item label="Urxvt">
+			<action name="Execute">
+				<command>
+					urxvt
+				</command>
+			</action>
+		</item>
+		<item label="Xterm">
+			<action name="Execute">
+				<command>
+					xterm
+				</command>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-net-menu" label="Internet">
+		<item label="Firefox">
+			<action name="Execute">
+				<command>
+               firefox
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+					<wmclass>
+						Firefox
+					</wmclass>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Chromium">
+			<action name="Execute">
+				<command>
+					chromium
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+					<wmclass>
+						Chromium
+					</wmclass>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-coding-menu" label="Coding">
+		<item label="Gvim">
+			<action name="Execute">
+				<command>
+					gvim
+				</command>
+			</action>
+		</item>
+		<item label="Eclipse">
+			<action name="Execute">
+				<command>
+					eclipse
+				</command>
+			</action>
+		</item>
+		</menu>
+	<menu id="apps-multimedia-menu" label="Multimedia">
+		<item label="Moc">
+			<action name="Execute">
+				<command>
+					urxvt -e "mocp"
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>item
+		<item label="XMMS">
+			<action name="Execute">
+				<command>
+					xmms
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+
+		<item label="VLC">
+			<action name="Execute">
+				<command>
+					vlc
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-fileman-menu" label="File Managers">
+		<item label="Ranger">
+			<action name="Execute">
+				<command>
+					urxvt -e "ranger"
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Midnight Commander">
+			<action name="Execute">
+				<command>
+					urxvt -e "mc"
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-graphics-menu" label="Graphics">
+		<item label="Gimp">
+			<action name="Execute">
+				<command>
+					gimp
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Xv">
+			<action name="Execute">
+				<command>
+					xv
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Dia Diagram Editor">
+			<action name="Execute">
+				<command>
+					dia
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Inkscape">
+			<action name="Execute">
+				<command>
+					inkscape
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="system-menu" label="System">
+		<item label="Openbox Configuration Manager">
+			<action name="Execute">
+				<command>
+					obconf
+				</command>
+				<startupnotify>
+					<enabled>
+						yes
+					</enabled>
+				</startupnotify>
+			</action>
+		</item>
+	
+		<item label="Manage Cups Printers">
+			<action name="Execute">
+				<command>
+					xdg-open http://localhost:631/
+				</command>
+				<startupnotify>
+					<enabled>
+						no
+					</enabled>
+					<icon>
+						cups
+					</icon>
+				</startupnotify>
+			</action>
+		</item>
+		<separator/>
+		<item label="Reconfigure Openbox">
+			<action name="Reconfigure"/>
+		</item>
+	</menu>
+	<menu id="root-menu" label="Openbox 3">
+		<separator label="Applications"/>
+		<menu id="apps-algebra-menu"/>
+		<menu id="apps-editors-menu"/>
+		<menu id="apps-graphics-menu"/>
+		<menu id="apps-net-menu"/>
+		<menu id="apps-coding-menu"/>
+		<menu id="apps-multimedia-menu"/>
+		<menu id="apps-term-menu"/>
+		<menu id="apps-fileman-menu"/>
+		<separator label="System"/>
+		<menu id="system-menu"/>
+		<separator/>
+		<item label="Log Out">
+			<action name="Exit">
+				<prompt>
+					yes
+				</prompt>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
