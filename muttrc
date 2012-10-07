@@ -6,6 +6,18 @@ set folder=imaps://s0805753@imap.sms.ed.ac.uk:993
 set record="=Sent Items"
 set postponed="=Drafts"
 
+# UTF-8 Encoding
+set send_charset="utf-8"
+
+# Editable headers
+set edit_headers=yes
+
+# Headers
+unmy_hdr *
+
+# OS Info.
+my_hdr X-Operating-System: `uname -s`, kernel `uname -r`
+
 # SMTP server
 set smtp_url=smtp://s0805753@smtp.sms.ed.ac.uk:587
 
