@@ -73,7 +73,7 @@ set hidden
 set mouse=a
 
 "GVim font settings
-set gfn=Monospace\ 8
+set gfn=Monospace\ 12
 
 "set wrapping - line break after 450 characters
 set textwidth=450
