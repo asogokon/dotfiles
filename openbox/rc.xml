@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>T-dark-2</name>
+    <name>Carbon</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -155,7 +155,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>25</top>
+    <top>17</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>

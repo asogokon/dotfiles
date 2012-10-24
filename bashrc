@@ -8,6 +8,9 @@
 # 8-bit terminal
 export TERM=rxvt-256color
 
+# Set vi mode
+set -o vi
+
 # set locale
 export LC_ALL=en_GB.UTF-8
 
@@ -21,7 +24,7 @@ alias pacman='pacman-color'
 alias gvim='gvim --remote-silent'
 alias :q!='exit'
 
-alias wine='WINEARCH=win32 WINEPREFIX=~/win32 wine'
+#alias wine='WINEARCH=win32 WINEPREFIX=~/win32 wine'
 PS1="\[\033[0;31m\][\$(date +%H:%M)]\[\033[1;34m\][\u:\w]$\[\033[0m\] "
 umask 077
 

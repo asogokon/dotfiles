@@ -15,7 +15,7 @@ use_xft yes
 update_interval 1.0
 
 # Dimensions
-minimum_size 2000 14
+minimum_size 2000 10
 
 draw_borders no
 
@@ -34,13 +34,13 @@ own_window_transparent no
 
 alignment top_left
 
-gap_x 2
-gap_y 6
+gap_x 0
+gap_y 0
 
 override_utf8_locale no
-xftfont Terminus:style=Bold:size=10
+xftfont profont:size=10
 xftalpha 0.6
 
 
 TEXT
-${color #00B80B}  CPU ${color #3c3c3c}${cpubar cpu1 12,200} ${cpubar cpu2 12,200} ${cpubar cpu3 12,200} ${cpubar cpu4 12,200} ${color #00B80B}    |     RAM ${color }$mem/$memmax ${color #3c3c3c}${membar 12,400}${color #00B80B}   |   Network Up ${color }${upspeed eth0} ${color #00B80B}Down ${color } ${downspeed eth0} ${color } 
+${iconv_start UTF-8 ISO_8859-1}${color #00B80B}  CPU ${color #3c3c3c}${cpubar cpu1 8,200} ${execi 2 sensors | grep "Core 0" | sed 's/.*\([0-9][0-9]*[0-9]\.[0-9].C\) \(.*\)/\1/g'} ${cpubar cpu2 8,200} ${execi 2 sensors | grep "Core 1" | sed 's/.*\([0-9][0-9]*[0-9]\.[0-9].C\) \(.*\)/\1/g'} ${cpubar cpu3 8,200} ${execi 2 sensors | grep "Core 2" | sed 's/.*\([0-9][0-9]*[0-9]\.[0-9].C\) \(.*\)/\1/g'} ${cpubar cpu4 8,200} ${execi 2 sensors | grep "Core 3" | sed 's/.*\([0-9][0-9]*[0-9]\.[0-9].C\) \(.*\)/\1/g'}${color #00B80B}    |     RAM ${color }$mem/$memmax ${color #3c3c3c}${membar 8,400}${color #00B80B}     |     Network Up ${color }${upspeed eth0} ${color #00B80B}Down ${color } ${downspeed eth0} ${color } ${iconv_stop}
