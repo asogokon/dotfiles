@@ -8,6 +8,9 @@
 # 8-bit terminal
 export TERM=rxvt-256color
 
+# set vi editing mode
+set -o vi
+
 # set locale
 export LC_ALL=en_GB.UTF-8
 

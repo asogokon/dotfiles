@@ -28,7 +28,7 @@ set tabstop=3
 set shiftwidth=3
 set softtabstop=3
 set expandtab
-set smarttab
+"set smarttab
 
 "Indentation & searching
 set autoindent
@@ -76,7 +76,7 @@ set mouse=a
 set gfn=Monospace\ 8
 
 "set wrapping - line break after 450 characters
-set textwidth=450
+set textwidth=200
 
 "Do not wrap text
 set nowrap
@@ -90,8 +90,9 @@ set spelllang=en_gb
 "Search only unfolded text
 set foldopen-=search
 
-"Enable LaTeX folding
-let g:tex_fold_enabled=1
+"LaTeX folding
+"let g:tex_fold_enabled=1
+set foldmethod=manual
 
 "Modelines security fix
 set modelines=0
@@ -171,7 +172,7 @@ set number
 set relativenumber
 
 "colour theme
-colorscheme vividchalk
+colorscheme pablo
 set background=dark
 
 "Miscellaneous
@@ -230,3 +231,10 @@ set lazyredraw
 
 "Read file when modified
 set autoread
+
+"Automatically change working directory
+set autochdir
+
+"Highlight text beyond column 80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/

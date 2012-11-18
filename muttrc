@@ -1,8 +1,8 @@
 # s0805753 .muttrc 
 
 # IMAP server &  folders
-set spoolfile=imaps://s0805753@imap.sms.ed.ac.uk:993/INBOX
-set folder=imaps://s0805753@imap.sms.ed.ac.uk:993
+set spoolfile=imaps://s0805753@imap.staffmail.ed.ac.uk:993/INBOX
+set folder=imaps://s0805753@imap.staffmail.ed.ac.uk:993
 set record="=Sent Items"
 set postponed="=Drafts"
 
